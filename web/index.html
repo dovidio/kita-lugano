@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KiTa Lugano — asili nido a Lugano e dintorni</title>
+  <meta name="description" content="Cerca e confronta gli asili nido (kita) della Città di Lugano e del suo agglomerato: elenco filtrabile e mappa.">
+  <!-- Inline SVG favicon: no extra file, no 404 request. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5fa5'/%3E%3Ccircle cx='16' cy='12' r='5' fill='%23fff'/%3E%3Cpath d='M5 27c1.8-5.4 6-8 11-8s9.2 2.6 11 8z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="list">
+  <a class="skip-link" href="#results-pane" data-i18n="app.skipToContent"></a>
+
+  <header class="app-header">
+    <div class="app-header__bar">
+      <div class="app-header__brand">
+        <h1 class="app-header__title" data-i18n="app.title"></h1>
+        <p class="app-header__tagline" data-i18n="app.tagline"></p>
+      </div>
+
+      <div class="app-header__tools">
+        <p class="app-header__updated" id="data-version"></p>
+
+        <div class="lang" role="group" aria-labelledby="lang-label">
+          <span class="sr-only" id="lang-label" data-i18n="lang.label"></span>
+          <button class="lang__btn" type="button" data-lang="it" aria-pressed="true">IT</button>
+          <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <div class="app-header__actions">
+          <a class="btn" id="dl-json" href="../data/kitas.json" download data-i18n="export.json"></a>
+          <button class="btn" type="button" id="dl-csv" data-i18n="export.csv"></button>
+        </div>
+        <p class="hint" id="export-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <details class="disclaimer">
+      <summary data-i18n="meta.disclaimer"></summary>
+      <div class="disclaimer__body">
+        <p id="disclaimer-text"></p>
+        <h2 class="disclaimer__heading" data-i18n="meta.sources"></h2>
+        <ul class="sources" id="sources"></ul>
+        <p class="small" id="schema-version"></p>
+        <p class="small" data-i18n="footer.dataSource"></p>
+      </div>
+    </details>
+  </header>
+
+  <main class="app-main">
+    <!-- ─── Controls ─────────────────────────────────────────────────── -->
+    <section class="controls" aria-labelledby="filters-title">
+      <h2 class="sr-only" id="filters-title" data-i18n="filters.legend"></h2>
+
+      <div class="field field--search">
+        <label class="field__label" for="search" data-i18n="search.label"></label>
+        <input class="input" id="search" type="search" autocomplete="off" spellcheck="false"
+               data-i18n-placeholder="search.placeholder">
+      </div>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="filter.type"></legend>
+        <div class="segmented">
+          <input type="radio" name="type" id="type-all" value="all" checked>
+          <label for="type-all" data-i18n="filter.type.all"></label>
+          <input type="radio" name="type" id="type-pubblico" value="pubblico">
+          <label for="type-pubblico" data-i18n="filter.type.pubblico"></label>
+          <input type="radio" name="type" id="type-privato" value="privato">
+          <label for="type-privato" data-i18n="filter.type.privato"></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="filter.area"></legend>
+        <div class="stack">
+          <label class="check">
+            <input type="radio" name="area" id="area-all" value="all" checked>
+            <span data-i18n="filter.area.all"></span>
+          </label>
+          <label class="check">
+            <input type="radio" name="area" id="area-city" value="city">
+            <span data-i18n="filter.area.city"></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="filter.age"></legend>
+        <div class="age">
+          <label class="sr-only" for="age" data-i18n="filter.age"></label>
+          <input class="input input--num" id="age" type="number" min="0" max="72" step="1"
+                 inputmode="numeric" data-i18n-placeholder="filter.age.placeholder">
+          <span class="unit" data-i18n="filter.age.unit"></span>
+          <div class="presets" id="age-presets" role="group"></div>
+        </div>
+        <p class="hint" id="age-hint"></p>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="filter.capacity"></legend>
+        <input class="input input--num" id="capacity" type="number" min="0" step="1" inputmode="numeric"
+               data-i18n-placeholder="filter.capacity.placeholder">
+        <p class="hint" data-i18n="filter.capacity.hint"></p>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="filter.languages"></legend>
+        <label class="check">
+          <input type="checkbox" id="only-it">
+          <span data-i18n="filter.languages.italianOnly"></span>
+        </label>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="filter.openNow"></legend>
+        <label class="check">
+          <input type="checkbox" id="open-now">
+          <span data-i18n="filter.openNow"></span>
+        </label>
+        <p class="hint" id="open-now-hint"></p>
+        <p class="hint hint--caveat" data-i18n="filter.hoursCaveat"></p>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field__label" data-i18n="sort.label"></legend>
+        <label class="sr-only" for="sort" data-i18n="sort.label"></label>
+        <select class="input" id="sort">
+          <option value="name" data-i18n="sort.name"></option>
+          <option value="capacity" data-i18n="sort.capacity"></option>
+          <option value="distance" data-i18n="sort.distance"></option>
+        </select>
+        <button class="btn" type="button" id="geo-btn" data-i18n="geo.use"></button>
+        <p class="hint" id="geo-status" role="status" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="field field--actions">
+        <button class="btn btn--primary" type="button" id="reset" data-i18n="filters.reset"></button>
+      </div>
+    </section>
+
+    <!-- ─── Mobile List/Map toggle ───────────────────────────────────── -->
+    <div class="view-toggle" role="group" aria-labelledby="view-toggle-label">
+      <span class="sr-only" id="view-toggle-label" data-i18n="map.title"></span>
+      <button type="button" id="view-list" aria-pressed="true" data-i18n="map.toggleList"></button>
+      <button type="button" id="view-map" aria-pressed="false" data-i18n="map.toggleMap"></button>
+    </div>
+
+    <!-- ─── Panes ────────────────────────────────────────────────────── -->
+    <div class="panes">
+      <section class="pane pane--list" id="results-pane" tabindex="-1" aria-labelledby="results-title">
+        <h2 class="sr-only" id="results-title" data-i18n="results.title"></h2>
+
+        <div class="results__head">
+          <p class="count" id="count" role="status" aria-live="polite"></p>
+        </div>
+
+        <p class="loading" id="loading" data-i18n="loading"></p>
+
+        <div class="notice notice--error" id="error-panel" role="alert" hidden>
+          <h3 data-i18n="error.title"></h3>
+          <p id="error-body"></p>
+          <button class="btn btn--primary" type="button" id="retry" data-i18n="error.retry"></button>
+        </div>
+
+        <div class="notice" id="empty" hidden>
+          <h3 data-i18n="results.none.title"></h3>
+          <p data-i18n="results.none.body"></p>
+          <button class="btn btn--primary" type="button" id="empty-reset" data-i18n="results.none.action"></button>
+        </div>
+
+        <ul class="cards" id="results"></ul>
+
+        <noscript>
+          <p class="notice">Questa pagina richiede JavaScript per filtrare e mostrare la mappa.</p>
+        </noscript>
+      </section>
+
+      <section class="pane pane--map" aria-labelledby="map-title">
+        <h2 class="sr-only" id="map-title" data-i18n="map.title"></h2>
+        <div class="map" id="map"></div>
+        <p class="map__notice" id="map-notice" hidden></p>
+        <p class="map__legend" id="map-legend" data-i18n-aria="map.legend">
+          <span class="legend__item"><span class="dot dot--pubblico" aria-hidden="true"></span><span data-i18n="filter.type.pubblico"></span></span>
+          <span class="legend__item"><span class="dot dot--privato" aria-hidden="true"></span><span data-i18n="filter.type.privato"></span></span>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Leaflet must be a classic script (defines window.L) before app.js runs. -->
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

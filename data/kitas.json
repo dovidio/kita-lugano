@@ -1,0 +1,1694 @@
+{
+  "meta": {
+    "title": "Nidi d'infanzia (Kita) a Lugano",
+    "description": "Strutture di accoglienza diurna per bambini in età prescolare (0-4 anni) nella Città di Lugano e nel suo agglomerato.",
+    "schema_version": "1.0.0",
+    "data_version": "2026-10-05",
+    "currency": "CHF",
+    "disclaimer": "Dati raccolti da fonti ufficiali pubbliche (Città di Lugano e Guida \"Diventare mamma e papà\" 2024). Posti, rette e orari cambiano: verificare sempre con la struttura prima di decidere. Le coordinate sono geocodificate sull'indirizzo e possono indicare l'edificio ma non l'ingresso esatto.",
+    "sources": [
+      {
+        "id": "lugano-nidi-privati",
+        "label": "Città di Lugano — Nidi privati",
+        "url": "https://www.lugano.ch/temi-servizi/sociale/famiglie-ragazzi/nidi-infanzia/nidi-privati/",
+        "publisher": "Città di Lugano",
+        "retrieved": "2026-10-05"
+      },
+      {
+        "id": "lugano-nidi-pubblici",
+        "label": "Città di Lugano — Nidi d'infanzia (LIS)",
+        "url": "https://www.lugano.ch/temi-servizi/sociale/famiglie-ragazzi/nidi-infanzia.html",
+        "publisher": "Città di Lugano",
+        "retrieved": "2026-10-05"
+      },
+      {
+        "id": "guida-2024",
+        "label": "Guida \"Diventare mamma e papà\" 2024 — sezione 2.2 Nidi d'infanzia",
+        "url": "https://www.lugano.ch/dam/jcr:ea1efcca-e240-4c2f-8376-37c29611c615/Guida_DiventareMammaePapa_2024.pdf",
+        "publisher": "Città di Lugano",
+        "retrieved": "2026-10-05"
+      },
+      {
+        "id": "lis",
+        "label": "LIS — Lugano Istituti Sociali",
+        "url": "https://www.lugano-lis.ch",
+        "publisher": "LIS — Lugano Istituti Sociali",
+        "retrieved": "2026-10-05"
+      }
+    ],
+    "count": 30
+  },
+  "kitas": [
+    {
+      "id": "nido-baroffio",
+      "name": "Nido d'infanzia Baroffio",
+      "type": "pubblico",
+      "operator": "LIS — Lugano Istituti Sociali",
+      "comune": "Lugano",
+      "zona": "Besso",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Baroffio 2",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Baroffio 2, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.006668,
+        "lon": 8.947729,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 58 866 39 90",
+        "email": "nidi.infanzia@lugano-lis.ch",
+        "website": "https://www.lugano-lis.ch"
+      },
+      "capacity": 45,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 settimane a luglio/agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Aperto dal 1994 a Villa Amalia, gestito da LIS. Frequenza minima 3 giorni o 3 mezze giornate; retta calcolata sul reddito. Precedenza ai domiciliati a Lugano.",
+      "sources": [
+        "lugano-nidi-pubblici",
+        "guida-2024",
+        "lis"
+      ]
+    },
+    {
+      "id": "nido-molino-nuovo",
+      "name": "Nido d'infanzia Molino Nuovo",
+      "type": "pubblico",
+      "operator": "LIS — Lugano Istituti Sociali",
+      "comune": "Lugano",
+      "zona": "Molino Nuovo",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Marco da Carona 10",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Marco da Carona 10, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.012897,
+        "lon": 8.958848,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 58 866 20 39",
+        "email": "nidi.infanzia@lugano-lis.ch",
+        "website": "https://www.lugano-lis.ch"
+      },
+      "capacity": 20,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 settimane a luglio/agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Aperto nel 2004, gestito da LIS. Frequenza minima 3 giorni o 3 mezze giornate; retta calcolata sul reddito. Precedenza ai domiciliati a Lugano.",
+      "sources": [
+        "lugano-nidi-pubblici",
+        "guida-2024",
+        "lis"
+      ]
+    },
+    {
+      "id": "nido-ronchetto",
+      "name": "Nido d'infanzia Ronchetto",
+      "type": "pubblico",
+      "operator": "LIS — Lugano Istituti Sociali",
+      "comune": "Lugano",
+      "zona": "Molino Nuovo",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Ronchetto 16",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Ronchetto 16, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.01955,
+        "lon": 8.956394,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 58 866 39 80",
+        "email": "nidi.infanzia@lugano-lis.ch",
+        "website": "https://www.lugano-lis.ch"
+      },
+      "capacity": 20,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 settimane a luglio/agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Aperto nel 2006, gestito da LIS. Frequenza minima 3 giorni o 3 mezze giornate; retta calcolata sul reddito. Precedenza ai domiciliati a Lugano.",
+      "sources": [
+        "lugano-nidi-pubblici",
+        "guida-2024",
+        "lis"
+      ]
+    },
+    {
+      "id": "nido-polis",
+      "name": "Nido Polis",
+      "type": "pubblico",
+      "operator": "LIS — Lugano Istituti Sociali",
+      "comune": "Lugano",
+      "zona": "Pregassona",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Vedreggio 2a",
+        "postal_code": "6963",
+        "locality": "Pregassona",
+        "full": "Via Vedreggio 2a, 6963 Pregassona"
+      },
+      "geo": {
+        "lat": 46.020794,
+        "lon": 8.971077,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 58 866 34 40",
+        "email": "nidi.infanzia@lugano-lis.ch",
+        "website": "https://www.lugano-lis.ch"
+      },
+      "capacity": 26,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – inizio scuola dell'infanzia"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 settimane ad agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Presso il Centro Polis a Pregassona, gestito da LIS. Sale separate per 3-12, 12-24 e 24+ mesi, cucina interna, parco giochi esterno riservato.",
+      "sources": [
+        "lugano-nidi-pubblici",
+        "guida-2024",
+        "lis"
+      ]
+    },
+    {
+      "id": "abaco",
+      "name": "ABACO",
+      "type": "privato",
+      "operator": "ABACO",
+      "comune": "Lugano",
+      "zona": null,
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via delle Aie 1",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via delle Aie 1, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.015781,
+        "lon": 8.957764,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 971 18 88",
+        "phone_alt": "+41 91 970 23 10",
+        "email": "abacoasilonido@bluewin.ch",
+        "website": "https://www.abacoasilonido.ch"
+      },
+      "capacity": null,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "1 settimana a Natale, 1 settimana in estate e giorni festivi",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "arcobaleno",
+      "name": "Asilo Nido Arcobaleno",
+      "type": "privato",
+      "operator": "Asilo Nido Arcobaleno",
+      "comune": "Lugano",
+      "zona": "Besso",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Besso 59",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Besso 59, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.010113,
+        "lon": 8.937252,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 960 09 60",
+        "email": "preasiloarcobaleno@gmail.com",
+        "website": "https://www.asilonidoarcobaleno.ch"
+      },
+      "capacity": 30,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:00",
+        "open": "07:30",
+        "close": "18:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "1 settimana a Natale, 2 settimane ad agosto e festivi",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "bio-nido-the-lounge",
+      "name": "Bio Nido The Lounge",
+      "type": "privato",
+      "operator": "The Lounge School",
+      "comune": "Lugano",
+      "zona": "Centro",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Corso Elvezia 27",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Corso Elvezia 27, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.008945,
+        "lon": 8.955863,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 922 23 31",
+        "email": "sara.gatti@theloungeschool.ch",
+        "website": "https://www.theloungeschool.ch"
+      },
+      "capacity": 21,
+      "age": {
+        "min_months": 12,
+        "max_months": 36,
+        "label": "1 – 3 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:00",
+        "open": "07:30",
+        "close": "18:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi e a Natale",
+      "languages": [
+        "it",
+        "en"
+      ],
+      "notes": "Nido bilingue italiano e inglese.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "birba-la-giraffa",
+      "name": "Birba la Giraffa",
+      "type": "privato",
+      "operator": "Nido La Giraffa",
+      "comune": "Cadempino",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via al Mulino 22",
+        "postal_code": "6814",
+        "locality": "Cadempino",
+        "full": "Via al Mulino 22, 6814 Cadempino"
+      },
+      "geo": {
+        "lat": 46.035603,
+        "lon": 8.930561,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 960 02 05",
+        "email": "info@nidolagiraffa.ch",
+        "website": "https://www.nidolagiraffa.ch"
+      },
+      "capacity": 36,
+      "age": {
+        "min_months": 0,
+        "max_months": 48,
+        "label": "0 – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–18:30",
+        "open": "07:00",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, 2 settimane a Natale e 1 ad agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "casa-bimbi",
+      "name": "Casa Bimbi",
+      "type": "privato",
+      "operator": "Casa Bimbi",
+      "comune": "Massagno",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Motta 52",
+        "postal_code": "6900",
+        "locality": "Massagno",
+        "full": "Via Motta 52, 6900 Massagno"
+      },
+      "geo": {
+        "lat": 46.012123,
+        "lon": 8.946251,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 967 15 28",
+        "email": "casabimbi@bluewin.ch",
+        "website": null
+      },
+      "capacity": 30,
+      "age": {
+        "min_months": 2,
+        "max_months": 48,
+        "label": "2 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 ponti decisi nel corso dell'anno",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "casa-infanzia-fogazzaro",
+      "name": "Casa dell'infanzia Fogazzaro",
+      "type": "privato",
+      "operator": "Casa dell'infanzia Fogazzaro",
+      "comune": "Lugano",
+      "zona": "Viganello",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via alla Chiesa 16",
+        "postal_code": "6962",
+        "locality": "Viganello",
+        "full": "Via alla Chiesa 16, 6962 Viganello"
+      },
+      "geo": {
+        "lat": 46.010059,
+        "lon": 8.96632,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 970 14 36",
+        "email": "giuntasilvana@libero.it",
+        "website": null
+      },
+      "capacity": 65,
+      "age": {
+        "min_months": 2,
+        "max_months": 36,
+        "label": "2 mesi – 3 anni (con sezione Harmos)"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "aperto tutto l'anno, tranne giorni festivi",
+      "languages": [
+        "it"
+      ],
+      "notes": "Con sezione Harmos per i bambini che non trovano posto alla scuola dell'infanzia.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "culla-baby-star",
+      "name": "Centro cristiano Culla Baby Star",
+      "type": "privato",
+      "operator": "Centro cristiano Culla Baby Star",
+      "comune": "Lugano",
+      "zona": "Breganzona",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Camara 16",
+        "postal_code": "6932",
+        "locality": "Breganzona",
+        "full": "Via Camara 16, 6932 Breganzona"
+      },
+      "geo": {
+        "lat": 46.015232,
+        "lon": 8.931947,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 968 19 19",
+        "email": "culla.baby.star@swissonline.ch",
+        "website": "https://www.cullababystar.ch"
+      },
+      "capacity": 48,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 06:30–19:00",
+        "open": "06:30",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "aperto tutto l'anno",
+      "languages": [
+        "it"
+      ],
+      "notes": "Orario molto esteso (06:30–19:00), utile per chi lavora a turni.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "centro-infanzia-arnaboldi",
+      "name": "Centro Infanzia Arnaboldi",
+      "type": "privato",
+      "operator": "Centro Infanzia Arnaboldi",
+      "comune": "Lugano",
+      "zona": null,
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via ai Ronchi 6",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via ai Ronchi 6, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.017014,
+        "lon": 8.954988,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 971 82 75",
+        "email": "direzione@centroarnaboldi.ch",
+        "website": "https://www.centroarnaboldi.ch"
+      },
+      "capacity": 60,
+      "age": {
+        "min_months": 0,
+        "max_months": 72,
+        "label": "0 – 6 anni"
+      },
+      "hours": {
+        "label": "lu–ve 06:45–18:45",
+        "open": "06:45",
+        "close": "18:45",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 settimane ad agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Struttura ampia (fino a 6 anni) con orario esteso dalle 06:45.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "la-coccinella",
+      "name": "Centro infanzia La Coccinella",
+      "type": "privato",
+      "operator": "Associazione Nido La Coccinella",
+      "comune": "Lugano",
+      "zona": null,
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Brentani 9",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Brentani 9, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.019203,
+        "lon": 8.959973,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 971 75 23",
+        "email": "associazionenidolacoccinella@gmail.com",
+        "website": "https://www.nidolacoccinella.ch"
+      },
+      "capacity": 28,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale, 2 settimane a luglio/agosto e festivi",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "girotondo-cagiallo",
+      "name": "Giardino d'infanzia Girotondo",
+      "type": "privato",
+      "operator": "Girotondo",
+      "comune": "Capriasca",
+      "zona": "Cagiallo",
+      "in_city_of_lugano": false,
+      "address": {
+        "street": null,
+        "postal_code": "6955",
+        "locality": "Cagiallo",
+        "full": "6955 Cagiallo"
+      },
+      "geo": {
+        "lat": 46.066235,
+        "lon": 8.972732,
+        "precision": "locality",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 930 07 01",
+        "phone_alt": "+41 79 947 84 21",
+        "email": "girotondo.cagiallo@gmail.com",
+        "website": "https://www.girotondo.ch"
+      },
+      "capacity": 17,
+      "age": {
+        "min_months": 12,
+        "max_months": 48,
+        "label": "1 – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:00",
+        "open": "07:30",
+        "close": "18:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, 2 settimane a Natale, in estate e 1 a Pasqua",
+      "languages": [
+        "it"
+      ],
+      "notes": "Indirizzo civico non pubblicato nella guida: coordinate a livello di località.",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "il-bocciolo",
+      "name": "Il Bocciolo",
+      "type": "privato",
+      "operator": "Scuola Rudolf Steiner",
+      "comune": "Origlio",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via ai Magi 4",
+        "postal_code": "6945",
+        "locality": "Origlio",
+        "full": "Via ai Magi 4, 6945 Origlio"
+      },
+      "geo": {
+        "lat": 46.047523,
+        "lon": 8.945049,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 966 29 62",
+        "email": "info@scuolasteiner.ch",
+        "website": "https://www.scuolasteiner.ch"
+      },
+      "capacity": 14,
+      "age": {
+        "min_months": 18,
+        "max_months": 48,
+        "label": "18 mesi – passaggio alla scuola dell'infanzia"
+      },
+      "hours": {
+        "label": "lu–ve 08:00–13:00",
+        "open": "08:00",
+        "close": "13:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "secondo calendario scolastico",
+      "languages": [
+        "it"
+      ],
+      "notes": "Presso la Scuola Rudolf Steiner; orario solo mattutino.",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "il-cactus",
+      "name": "Il Cactus",
+      "type": "privato",
+      "operator": "Il Cactus",
+      "comune": "Melano",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Scairone",
+        "postal_code": "6818",
+        "locality": "Melano",
+        "full": "Via Scairone, 6818 Melano"
+      },
+      "geo": {
+        "lat": 45.921177,
+        "lon": 8.98404,
+        "precision": "street",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 630 56 11",
+        "phone_alt": "+41 76 327 27 19",
+        "email": "direzione@ilcactus.ch",
+        "website": "https://www.ilcactus.ch"
+      },
+      "capacity": 22,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 4 anni (4 anni se manca l'accettazione alla scuola dell'infanzia)"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi e 4 settimane all'anno",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "il-kamaleonte",
+      "name": "Il Kamaleonte",
+      "type": "privato",
+      "operator": "Associazione Kreiamoci",
+      "comune": "Porza",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Chiosso 7",
+        "postal_code": "6948",
+        "locality": "Porza",
+        "full": "Via Chiosso 7, 6948 Porza"
+      },
+      "geo": {
+        "lat": 46.027157,
+        "lon": 8.963693,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 220 68 13",
+        "email": "nidokamaleonte@gmail.com",
+        "website": "https://ilkamaleonte.ch"
+      },
+      "capacity": 18,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e festività nazionali",
+      "languages": [
+        "it"
+      ],
+      "notes": "Gestito dall'Associazione Kreiamoci (stessa associazione de La Kiocciola).",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "il-melograno",
+      "name": "Il Melograno — Asilo nido",
+      "type": "privato",
+      "operator": "Il Melograno",
+      "comune": "Comano",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Cantonale 55",
+        "postal_code": "6949",
+        "locality": "Comano",
+        "full": "Via Cantonale 55, 6949 Comano"
+      },
+      "geo": {
+        "lat": 46.036774,
+        "lon": 8.954781,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 942 10 00",
+        "email": "direzione@asilo-nido.ch",
+        "website": "https://www.melogranonido.ch"
+      },
+      "capacity": 18,
+      "age": {
+        "min_months": 0,
+        "max_months": 48,
+        "label": "0 – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–18:30",
+        "open": "07:00",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, 1 settimana a Natale e 1 a Carnevale",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "il-trenino",
+      "name": "Il Trenino",
+      "type": "privato",
+      "operator": "Il Trenino",
+      "comune": "Lugano",
+      "zona": "Molino Nuovo",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Ronchetto 16a",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Ronchetto 16a, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.019657,
+        "lon": 8.956179,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 970 26 27",
+        "phone_alt": "+41 76 679 16 69",
+        "email": "ad.martignoni@bluewin.ch",
+        "website": "https://www.iltrenino.ch"
+      },
+      "capacity": 21,
+      "age": {
+        "min_months": 0,
+        "max_months": 48,
+        "label": "0 – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 06:30–19:00",
+        "open": "06:30",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale",
+      "languages": [
+        "it"
+      ],
+      "notes": "Accoglie prioritariamente i figli dei dipendenti di Ospedale Civico, Cardiocentro e Croce Verde; si rivolge anche a famiglie esterne.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "la-casa-di-pinocchio",
+      "name": "La Casa di Pinocchio",
+      "type": "privato",
+      "operator": "La Casa di Pinocchio",
+      "comune": "Bioggio",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Piazza Stazione 4",
+        "postal_code": "6934",
+        "locality": "Bioggio",
+        "full": "Piazza Stazione 4, 6934 Bioggio"
+      },
+      "geo": {
+        "lat": 46.012108,
+        "lon": 8.908274,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 600 28 22",
+        "email": "info@casadipinocchio.ch",
+        "website": "https://www.casadipinocchio.ch"
+      },
+      "capacity": 50,
+      "age": {
+        "min_months": 4,
+        "max_months": 72,
+        "label": "4 mesi – 6 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi e 2 settimane a Natale",
+      "languages": [
+        "it"
+      ],
+      "notes": "Accoglie fino a 6 anni, con continuità anche dopo i 4 anni.",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "la-corte-dei-bambini",
+      "name": "La Corte dei Bambini",
+      "type": "privato",
+      "operator": "La Corte dei Bambini",
+      "comune": "Vezia",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via ai Ronchi 1",
+        "postal_code": "6943",
+        "locality": "Vezia",
+        "full": "Via ai Ronchi 1, 6943 Vezia"
+      },
+      "geo": {
+        "lat": 46.027611,
+        "lon": 8.938458,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 630 52 24",
+        "phone_alt": "+41 76 336 50 60",
+        "email": "lacortedeibambini@gmail.com",
+        "website": "https://www.lacortedeibambini.ch"
+      },
+      "capacity": 29,
+      "age": {
+        "min_months": 0,
+        "max_months": 72,
+        "label": "0 – 6 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, 2 settimane a Natale e 2 in estate",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "la-kiocciola",
+      "name": "Asilo nido \"La Kiocciola\" di Kreiamoci",
+      "type": "privato",
+      "operator": "Associazione Kreiamoci",
+      "comune": "Lugano",
+      "zona": "Pregassona",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Giovanni Maraini 15",
+        "postal_code": "6963",
+        "locality": "Pregassona",
+        "full": "Via Giovanni Maraini 15, 6963 Pregassona"
+      },
+      "geo": {
+        "lat": 46.026581,
+        "lon": 8.96822,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 220 84 74",
+        "email": "info@lakiocciola.ch",
+        "website": "https://www.lakiocciola.ch"
+      },
+      "capacity": 18,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "1 settimana a Natale e 1 in agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": null,
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "mini-centro-grancia",
+      "name": "Mini Centro Grancia",
+      "type": "privato",
+      "operator": "Mini Centro",
+      "comune": "Grancia",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Pian Scairolo",
+        "postal_code": "6916",
+        "locality": "Grancia",
+        "full": "Via Pian Scairolo, 6916 Grancia"
+      },
+      "geo": {
+        "lat": 45.96862,
+        "lon": 8.926485,
+        "precision": "locality",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 993 17 64",
+        "phone_alt": "+41 78 758 33 74",
+        "email": "minicentro@bluewin.ch",
+        "website": "https://www.nidominicentro.ch"
+      },
+      "capacity": 20,
+      "age": {
+        "min_months": 3,
+        "max_months": 48,
+        "label": "3 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, a Natale e ad agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "La guida indica solo \"Via Pian Scairolo, 6916 Grancia\"; il geocoder ufficiale non trova quella via nel comune di Grancia (esiste a Pazzallo/Pambio-Noranco). La posizione sulla mappa è quindi approssimativa, a livello di comune: verificare l'indirizzo esatto con la struttura.",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "multispazio-eccolo",
+      "name": "Multispazio Eccolo",
+      "type": "privato",
+      "operator": "Multispazio Eccolo",
+      "comune": "Massagno",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Ceresio 2",
+        "postal_code": "6900",
+        "locality": "Massagno",
+        "full": "Via Ceresio 2, 6900 Massagno"
+      },
+      "geo": {
+        "lat": 46.009148,
+        "lon": 8.94205,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 966 31 43",
+        "email": "asilo.eccolo@ticino.com",
+        "website": "https://www.asiloeccolo.ch"
+      },
+      "capacity": 44,
+      "age": {
+        "min_months": 0,
+        "max_months": 72,
+        "label": "0 – 6 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–19:00",
+        "open": "07:00",
+        "close": "19:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "solo festivi",
+      "languages": [
+        "it"
+      ],
+      "notes": "Aperto tutto l'anno tranne i festivi; accoglie fino a 6 anni.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "piccoli-passi",
+      "name": "Nido Piccoli Passi",
+      "type": "privato",
+      "operator": "Associazione centri OCST per l'infanzia",
+      "comune": "Lugano",
+      "zona": "Centro",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Lambertenghi 1",
+        "postal_code": "6900",
+        "locality": "Lugano",
+        "full": "Via Lambertenghi 1, 6900 Lugano"
+      },
+      "geo": {
+        "lat": 46.008045,
+        "lon": 8.957294,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 225 83 27",
+        "phone_alt": "+41 76 206 27 56",
+        "email": "piccolipassi@ocst.ch",
+        "website": "https://www.asilopiccolipassi.ch"
+      },
+      "capacity": 25,
+      "age": {
+        "min_months": 12,
+        "max_months": 48,
+        "label": "1 – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi e 2 settimane a Natale",
+      "languages": [
+        "it"
+      ],
+      "notes": "Gestito dall'Associazione centri OCST per l'infanzia.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "ottoaccazeta",
+      "name": "Ottoaccazeta",
+      "type": "privato",
+      "operator": "Associazione 8Hz Family Coworking",
+      "comune": "Lugano",
+      "zona": "Pambio-Noranco",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via Pian Scairolo 10",
+        "postal_code": "6915",
+        "locality": "Pambio-Noranco",
+        "full": "Via Pian Scairolo 10, 6915 Pambio-Noranco"
+      },
+      "geo": {
+        "lat": 45.986126,
+        "lon": 8.933728,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 797 44 44",
+        "phone_alt": "+41 78 959 90 80",
+        "email": "nido@ottoaccazeta.ch",
+        "website": "https://cofamily8hz.ch/nido/"
+      },
+      "capacity": 17,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:30–18:30",
+        "open": "07:30",
+        "close": "18:30",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 2 settimane ad agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Progetto PonteHarmos per i bambini non accolti alla scuola dell'infanzia. Ulteriore contatto: direzionenido@ottoaccazeta.ch, 079 743 39 75.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "primi-passi-ibsa",
+      "name": "Primi Passi IBSA",
+      "type": "privato",
+      "operator": "IBSA",
+      "comune": "Lugano",
+      "zona": "Pambio-Noranco",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Via La Risciada 48",
+        "postal_code": "6915",
+        "locality": "Pambio-Noranco",
+        "full": "Via La Risciada 48, 6915 Pambio-Noranco"
+      },
+      "geo": {
+        "lat": 45.984047,
+        "lon": 8.9283,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 993 09 21",
+        "email": "nidoprimipassi@ibsa.ch",
+        "website": "https://www.nidoprimipassi.ch"
+      },
+      "capacity": 30,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:00–18:00",
+        "open": "07:00",
+        "close": "18:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, 2 settimane a Natale e 2 ad agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Progetto PonteHarmos per i bambini non accolti alla scuola dell'infanzia. Residenza Pra.",
+      "sources": [
+        "lugano-nidi-privati",
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "rsi-oasi-della-gioia",
+      "name": "RSI nido d'infanzia — Oasi della Gioia",
+      "type": "privato",
+      "operator": "RSI",
+      "comune": "Comano",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Cureglia",
+        "postal_code": "6949",
+        "locality": "Comano",
+        "full": "Via Cureglia, 6949 Comano"
+      },
+      "geo": {
+        "lat": 46.033077,
+        "lon": 8.952603,
+        "precision": "street",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 91 803 50 10",
+        "email": "nido@rsi.ch",
+        "website": "https://www.asilonidorsi.ch"
+      },
+      "capacity": null,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 08:00–18:00",
+        "open": "08:00",
+        "close": "18:00",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "festivi, 2 settimane ad agosto, Natale e Pasqua",
+      "languages": [
+        "it"
+      ],
+      "notes": "Accoglie prioritariamente i figli dei dipendenti RSI; se restano posti, accoglie bambini dei comuni limitrofi.",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "supsi-nido",
+      "name": "SUPSI nido",
+      "type": "privato",
+      "operator": "SUPSI",
+      "comune": "Manno",
+      "zona": null,
+      "in_city_of_lugano": false,
+      "address": {
+        "street": "Via Cantonale 18, Stabile Suglio",
+        "postal_code": "6928",
+        "locality": "Manno",
+        "full": "Via Cantonale 18, Stabile Suglio, 6928 Manno"
+      },
+      "geo": {
+        "lat": 46.030312,
+        "lon": 8.922223,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 58 666 69 00",
+        "email": "nido@supsi.ch",
+        "website": "https://www.supsi.ch/nido"
+      },
+      "capacity": 23,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:45–18:15",
+        "open": "07:45",
+        "close": "18:15",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 3 tra luglio e agosto",
+      "languages": [
+        "it"
+      ],
+      "notes": "Priorità a figli/e di dipendenti, studenti/tesse e collaboratori/trici SUPSI; posti liberi aperti anche a famiglie esterne.",
+      "sources": [
+        "guida-2024"
+      ]
+    },
+    {
+      "id": "usi-supsinido",
+      "name": "USI SUPSINido",
+      "type": "privato",
+      "operator": "USI / SUPSI",
+      "comune": "Lugano",
+      "zona": "Viganello",
+      "in_city_of_lugano": true,
+      "address": {
+        "street": "Campus Est, Via La Santa 1",
+        "postal_code": "6962",
+        "locality": "Viganello",
+        "full": "Campus Est, Via La Santa 1, 6962 Viganello"
+      },
+      "geo": {
+        "lat": 46.011478,
+        "lon": 8.960635,
+        "precision": "address",
+        "accuracy": "address",
+        "geocoder": "swisstopo geo.admin.ch SearchServer"
+      },
+      "contact": {
+        "phone": "+41 58 666 69 05",
+        "email": "miryam.pol@supsi.ch",
+        "website": "https://www.supsi.ch/servizio-prima-infanzia"
+      },
+      "capacity": 28,
+      "age": {
+        "min_months": 4,
+        "max_months": 48,
+        "label": "4 mesi – 3/4 anni"
+      },
+      "hours": {
+        "label": "lu–ve 07:45–18:15",
+        "open": "07:45",
+        "close": "18:15",
+        "days": [
+          "mo",
+          "tu",
+          "we",
+          "th",
+          "fr"
+        ],
+        "continuous": true
+      },
+      "closures": "2 settimane a Natale e 3 settimane in estate",
+      "languages": [
+        "it"
+      ],
+      "notes": "Priorità a collaboratori/trici e studenti/tesse USI e SUPSI.",
+      "sources": [
+        "guida-2024"
+      ]
+    }
+  ]
+}

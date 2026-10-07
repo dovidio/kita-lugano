@@ -1,0 +1,41 @@
+{
+  "name": "kita-lugano",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Structured data and an interactive map of day-care centres (asili nido / kita) in Lugano and its agglomeration.",
+  "type": "module",
+  "main": "server/server.mjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "serve": "node server/server.mjs",
+    "start": "node server/server.mjs",
+    "geocode": "python3 scripts/geocode.py",
+    "geocode:refresh": "python3 scripts/geocode.py --refresh",
+    "validate": "python3 scripts/validate.py --verbose",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "smoke": "bash scripts/smoke.sh",
+    "test": "bash scripts/smoke.sh",
+    "check": "npm run validate && npm run check:i18n && node --check server/server.mjs"
+  },
+  "keywords": [
+    "lugano",
+    "ticino",
+    "switzerland",
+    "kita",
+    "asilo-nido",
+    "childcare",
+    "open-data",
+    "leaflet",
+    "map"
+  ],
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "docs",
+    "data": "data"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
