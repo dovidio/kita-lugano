@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Guida per contribuire / Contributing guide
+    url: https://github.com/dovidio/kita-lugano/blob/main/CONTRIBUTING.md
+    about: Come aggiornare il dataset e aprire una pull request. / How to update the dataset and open a pull request.
+  - name: Come funzionano i dati / How the data works
+    url: https://github.com/dovidio/kita-lugano/blob/main/docs/SOURCES.md
+    about: Fonti, geocodifica e limiti del dataset. / Sources, geocoding and dataset limitations.

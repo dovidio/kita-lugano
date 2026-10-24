@@ -1,7 +1,13 @@
 # KiTa Lugano 🧸🗺️
 
+[![validate](https://github.com/dovidio/kita-lugano/actions/workflows/validate.yml/badge.svg)](https://github.com/dovidio/kita-lugano/actions/workflows/validate.yml)
+[![live app](https://img.shields.io/badge/live-dovidio.github.io%2Fkita--lugano-2ea44f)](https://dovidio.github.io/kita-lugano/)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A small, dependency-free project to **search day-care centres (*asili nido* / kita)
 in Lugano** — with clean structured data and an interactive map.
+
+**→ Live app: <https://dovidio.github.io/kita-lugano/>**
 
 The dataset covers the **Città di Lugano and its agglomeration**: 30 facilities
 (4 public, run by the municipal LIS institute, and 26 private), with address,
@@ -18,21 +24,27 @@ No framework, no bundler, no npm dependencies: a JSON file, a Leaflet map, and a
 ## Quick start
 
 ```bash
-cd kita-lugano
-npm run serve          # → http://127.0.0.1:8787/web/
+npm run serve          # → http://127.0.0.1:8787/
 ```
 
 That's it — no install step, `node_modules` is not needed. Node ≥ 18 only (for the
-optional server). The web app itself is pure static files and can be served by
-anything that serves the project root:
+optional server). The app is pure static files and can be served by anything pointed
+at the repository root:
 
 ```bash
-python3 -m http.server 8000    # → http://127.0.0.1:8000/web/
+python3 -m http.server 8000    # → http://127.0.0.1:8000/
 ```
 
-> The app fetches `../data/kitas.json`, so it must be served from the **project
-> root**, not from inside `web/`. Opening `web/index.html` via `file://` will not
-> work because of the browser's CORS rules for `fetch`.
+> The app fetches `data/kitas.json` with a *relative* URL, so it works both at a
+> domain root and under a project path like `/kita-lugano/` on GitHub Pages.
+> Opening `index.html` via `file://` will not work because of the browser's CORS
+> rules for `fetch`.
+
+## Hosting
+
+GitHub Pages serves the `main` branch from the repository root (`.nojekyll` is
+present, so there is no Jekyll processing — the files in the repo are the files
+served). Pushing to `main` publishes; no build step, no deploy workflow.
 
 ---
 
@@ -57,6 +69,9 @@ python3 -m http.server 8000    # → http://127.0.0.1:8000/web/
 Every record shows how precise its map position is (`address`, `street`, or
 `locality`), because the geocoding was derived from the addresses — see
 [docs/SOURCES.md](docs/SOURCES.md).
+
+The footer links straight to the issue forms, so anyone using the map can report a
+wrong entry or propose a missing Kita without cloning anything.
 
 ---
 
@@ -128,30 +143,34 @@ Supported parameters: `q`, `type`, `comune` (repeatable), `in_city_of_lugano`,
 are given. The dataset is re-read from disk when the file changes, so no restart
 is needed after editing the JSON.
 
+The JSON API is local-only: GitHub Pages serves static files, so the published site
+uses `data/kitas.json` directly.
+
 ---
 
 ## Scripts
 
 ```bash
 npm run validate         # structural + domain validation of data/kitas.json
+npm run check:i18n       # IT/EN dictionary parity + key references
 npm run geocode          # (re)geocode from cache, write coordinates into the JSON
 npm run geocode:refresh  # ignore the cache and query swisstopo again
 npm run smoke            # boot the server and exercise API + assets end to end
-npm run check            # validate + syntax-check the server
+npm run check            # validate + i18n + syntax-check the server
+npm test                 # alias for smoke
 ```
 
 `scripts/smoke.sh` boots the server on a scratch port and asserts the whole
 contract: 30 records, the type/area/age/capacity/language/distance filters, single
 record lookup and 404s, distance sorting, path-traversal blocking, and that
-`web/index.html` references the vendored Leaflet bundle and the dataset. It exits
-non-zero on the first failure and is safe to run in CI.
+`index.html` references the vendored Leaflet bundle and the dataset. It exits
+non-zero on the first failure and runs in CI.
 
 `scripts/geocode.py` uses the **official Swiss geocoder** (swisstopo /
-geo.admin.ch), caches every answer in `data/raw/geocode-cache.json`, and — this
-matters — **rejects implausible matches**: the geocoder always returns its best
-guess, so the script requires all distinctive street tokens to appear in the
-result and otherwise degrades the record to street- or locality-level precision
-instead of silently pointing at the wrong road.
+geo.admin.ch), caches every answer, and — this matters — **rejects implausible
+matches**: the geocoder always returns its best guess, so the script requires all
+distinctive street tokens to appear in the result and otherwise degrades the record
+to street- or locality-level precision instead of silently pointing at the wrong road.
 
 `scripts/validate.py` is a zero-dependency checker that enforces the schema
 constraints plus cross-record invariants: unique ids, `meta.count` consistency,
@@ -164,25 +183,58 @@ coherent age ranges, opening hours that end after they start, and so on.
 
 ```
 kita-lugano/
+├── index.html                    # the app (served at / on GitHub Pages)
+├── app.js                        # search, filters, sort, list ↔ map sync
+├── i18n.js                       # IT/EN interface strings
+├── styles.css
+├── vendor/leaflet/               # Leaflet 1.9.4, vendored (works offline)
 ├── data/
 │   ├── kitas.json                # the dataset (source of truth, hand-curated)
-│   ├── kitas.schema.json         # JSON Schema 2020-12
-│   └── raw/                      # scraped snapshots + geocoder cache (provenance)
+│   └── kitas.schema.json         # JSON Schema 2020-12
 ├── docs/
 │   ├── SOURCES.md                # where every field comes from + geocoding notes
-│   └── FINANZIAMENTI.md          # cantonal subsidies, reimbursements, tax deductions
+│   ├── FINANZIAMENTI.md          # cantonal subsidies, reimbursements, tax deductions
+│   └── screenshot.png
 ├── scripts/
 │   ├── geocode.py                # dataset → coordinates (swisstopo, cached, validated)
-│   └── validate.py               # dataset → errors/warnings
+│   ├── validate.py               # dataset → errors/warnings
+│   ├── check-i18n.mjs            # dictionary parity
+│   └── smoke.sh                  # end-to-end test
 ├── server/
-│   └── server.mjs                # static server + JSON API, Node built-ins only
-└── web/
-    ├── index.html
-    ├── app.js                    # search, filters, sort, list ↔ map sync
-    ├── i18n.js                   # IT/EN interface strings
-    ├── styles.css
-    └── vendor/leaflet/           # Leaflet 1.9.4, vendored (works offline)
+│   └── server.mjs                # dev server + JSON API, Node built-ins only
+├── .github/
+│   ├── workflows/validate.yml    # CI: validation + smoke test
+│   ├── ISSUE_TEMPLATE/           # "add a facility" / "correct a detail" forms
+│   └── pull_request_template.md
+├── CONTRIBUTING.md
+└── LICENSE
 ```
+
+`data/raw/` (scraped snapshots and the geocoder cache) is intentionally **not
+committed**: it contains third-party documents that are better linked than
+redistributed. `npm run geocode` regenerates the cache locally.
+
+---
+
+## Contributing
+
+Corrections are the most valuable contribution: a Kita that closed, changed its
+hours, or opened somewhere new.
+
+- **No Git needed** — use the issue forms:
+  [add a facility](https://github.com/dovidio/kita-lugano/issues/new?template=add-kita.yml)
+  or [correct a detail](https://github.com/dovidio/kita-lugano/issues/new?template=data-correction.yml).
+- **Prefer a pull request?** Edit `data/kitas.json`, run `npm run geocode`,
+  `npm run check` and `npm run smoke`, then open the PR. Full instructions, the
+  JSON template and the review criteria are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Three rules apply to everything:
+
+1. **Official sources only** — the City, LIS, the operator, a cantonal publication.
+2. **Never guess** — a value you cannot source stays `null` (shown as "n.d.").
+3. **Ids are permanent** — they appear in URLs and exports, so they are never renamed.
+
+CI runs validation and the smoke test on every push and pull request.
 
 ---
 
@@ -198,8 +250,8 @@ All data comes from official public sources — nothing is invented:
 Coordinates: [swisstopo geo.admin.ch](https://api3.geo.admin.ch). Map tiles:
 © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.
 
-See [docs/SOURCES.md](docs/SOURCES.md) for the per-field mapping and the list of
-raw snapshots kept in `data/raw/`.
+See [docs/SOURCES.md](docs/SOURCES.md) for the per-field mapping and the geocoding
+notes.
 
 ## Scope and limitations
 

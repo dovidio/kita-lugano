@@ -143,6 +143,9 @@ export const it = {
   'error.reason.shape': 'il file dati non contiene l’elenco delle strutture',
   'error.retry': 'Riprova',
   'footer.dataSource': 'Dati pubblici della Città di Lugano e LIS.',
+  'footer.source': 'Codice e dati su GitHub',
+  'footer.contribute': 'Manca una struttura o un dato non è corretto?',
+  'footer.contributeLink': 'Segnala o proponi una modifica',
 };
 
 export const en = {
@@ -277,6 +280,9 @@ export const en = {
   'error.reason.shape': 'the data file has no facility list',
   'error.retry': 'Try again',
   'footer.dataSource': 'Public data from the City of Lugano and LIS.',
+  'footer.source': 'Code and data on GitHub',
+  'footer.contribute': 'Is a facility missing or a detail wrong?',
+  'footer.contributeLink': 'Report or suggest a change',
 };
 
 const DICTS = { it, en };

@@ -130,7 +130,7 @@ select.input { width: 100%; }
 
 /* ── Main / controls ────────────────────────────────────────────────── */
 
-.app-main { padding: clamp(10px, 2vw, 22px) clamp(12px, 3vw, 28px) 60px; }
+.app-main { padding: clamp(10px, 2vw, 22px) clamp(12px, 3vw, 28px) 26px; }
 
 .controls {
   display: grid; gap: 12px 18px; margin-bottom: 14px;
@@ -306,3 +306,17 @@ fieldset.field > .field__label { padding: 0; }
   * { transition: none !important; animation: none !important; }
   html { scroll-behavior: auto !important; }
 }
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+
+.app-footer {
+  max-width: 1500px; margin: 0 auto;
+  padding: 16px clamp(12px, 3vw, 28px) 36px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 6px 20px;
+  color: var(--muted); font-size: 12.5px;
+}
+.app-footer__line { margin: 0; }
+.app-footer__sep { margin: 0 4px; opacity: .6; }
+.app-footer a { color: var(--accent); }
+

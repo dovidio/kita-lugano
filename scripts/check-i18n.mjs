@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join, resolve } from "node:path";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const WEB = join(ROOT, "web");
+const WEB = ROOT;
 
 const problems = [];
 const note = (message) => problems.push(message);
@@ -27,7 +27,7 @@ const appSource = await readFile(join(WEB, "app.js"), "utf8");
 const cssSource = await readFile(join(WEB, "styles.css"), "utf8");
 
 // --- load the dictionaries by importing the module directly -----------------
-const { it, en } = await import(new URL("../web/i18n.js", import.meta.url).href);
+const { it, en } = await import(new URL("../i18n.js", import.meta.url).href);
 
 const itKeys = new Set(Object.keys(it));
 const enKeys = new Set(Object.keys(en));

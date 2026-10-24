@@ -30,7 +30,7 @@
         </div>
 
         <div class="app-header__actions">
-          <a class="btn" id="dl-json" href="../data/kitas.json" download data-i18n="export.json"></a>
+          <a class="btn" id="dl-json" href="data/kitas.json" download data-i18n="export.json"></a>
           <button class="btn" type="button" id="dl-csv" data-i18n="export.csv"></button>
         </div>
         <p class="hint" id="export-status" role="status" aria-live="polite"></p>
@@ -188,6 +188,18 @@
       </section>
     </div>
   </main>
+
+  <footer class="app-footer">
+    <p class="app-footer__line">
+      <span data-i18n="footer.dataSource"></span>
+      <span class="app-footer__sep" aria-hidden="true">·</span>
+      <a href="https://github.com/dovidio/kita-lugano" data-i18n="footer.source"></a>
+    </p>
+    <p class="app-footer__line">
+      <span data-i18n="footer.contribute"></span>
+      <a href="https://github.com/dovidio/kita-lugano/issues/new/choose" data-i18n="footer.contributeLink"></a>
+    </p>
+  </footer>
 
   <!-- Leaflet must be a classic script (defines window.L) before app.js runs. -->
   <script src="vendor/leaflet/leaflet.js"></script>

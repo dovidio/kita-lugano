@@ -1,0 +1,127 @@
+name: Aggiungi una struttura / Add a facility
+description: Proponi un asilo nido che manca dall'elenco. / Propose a nursery that is missing from the list.
+title: "[Nuova struttura] "
+labels: ["data: new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie! / Thank you!
+
+        Prima di compilare, controlla che la struttura **non sia già presente** nell'elenco
+        (cerca il nome nel sito) e che sia un **nido d'infanzia** (0–4 anni), non una scuola
+        dell'infanzia.
+
+        Serve **una fonte ufficiale**: sito della struttura, pagina della Città di Lugano,
+        guida comunale o cantonale. Se un dato non è pubblicato, lascia il campo vuoto:
+        nel dataset useremo `null`, non una stima.
+        / *A public source is required. Leave fields blank rather than guessing.*
+
+  - type: input
+    id: name
+    attributes:
+      label: Nome della struttura / Facility name
+      placeholder: "es. Nido d'infanzia La Tartaruga"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Tipo / Type
+      options:
+        - Pubblico (gestito da LIS o da un ente pubblico)
+        - Privato
+        - Non so / Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: address
+    attributes:
+      label: Indirizzo / Address
+      description: Via e numero civico, CAP e località.
+      placeholder: "es. Via Pra 12, 6900 Lugano"
+    validations:
+      required: true
+
+  - type: input
+    id: comune
+    attributes:
+      label: Comune / Municipality
+      description: Il comune politico (Lugano, Massagno, Comano, …), non il quartiere.
+      placeholder: "es. Lugano"
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Sito web / Website
+      placeholder: "https://…"
+
+  - type: input
+    id: phone
+    attributes:
+      label: Telefono / Phone
+      placeholder: "+41 91 …"
+
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      description: Solo indirizzi già pubblicati ufficialmente. / Only officially published addresses.
+      placeholder: "info@…"
+
+  - type: input
+    id: capacity
+    attributes:
+      label: Posti / Places
+      description: Numero massimo di bambini accolti, se pubblicato.
+      placeholder: "es. 24"
+
+  - type: input
+    id: ages
+    attributes:
+      label: Età accolte / Ages accepted
+      placeholder: "es. 3 mesi – 4 anni"
+
+  - type: input
+    id: hours
+    attributes:
+      label: Orari / Opening hours
+      placeholder: "es. lu–ve 07:30–18:30"
+
+  - type: input
+    id: languages
+    attributes:
+      label: Lingue / Languages
+      placeholder: "es. italiano, inglese"
+
+  - type: input
+    id: source
+    attributes:
+      label: Fonte ufficiale / Official source (URL)
+      description: La pagina da cui hai preso i dati. È obbligatoria.
+      placeholder: "https://…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Note
+      description: Cosa rende questa struttura diversa dalle altre? Priorità particolari, sezioni Harmos, progetto PonteHarmos, ecc.
+      placeholder: "Facoltativo / Optional"
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Conferme / Confirmations
+      options:
+        - label: Ho preso i dati da una fonte ufficiale e il link è qui sopra. / The data comes from an official source linked above.
+          required: true
+        - label: Ho controllato che la struttura non sia già nell'elenco. / I checked that the facility is not already listed.
+          required: true
+        - label: Ho lasciato vuoti i campi che non conosco, invece di indovinare. / I left unknown fields blank instead of guessing.
+          required: true

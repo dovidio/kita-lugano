@@ -53,9 +53,9 @@ if python3 scripts/validate.py >/tmp/kita-validate.out 2>&1; then
 else
   bad "dataset validation failed"; cat /tmp/kita-validate.out
 fi
-for asset in web/index.html web/app.js web/i18n.js web/styles.css \
-             web/vendor/leaflet/leaflet.js web/vendor/leaflet/leaflet.css \
-             web/vendor/leaflet/images/marker-icon.png; do
+for asset in index.html app.js i18n.js styles.css \
+             vendor/leaflet/leaflet.js vendor/leaflet/leaflet.css \
+             vendor/leaflet/images/marker-icon.png; do
   if [ -f "$asset" ]; then ok "asset $asset"; else bad "asset $asset missing"; fi
 done
 if node scripts/check-i18n.mjs >/tmp/kita-i18n.out 2>&1; then
@@ -92,10 +92,10 @@ assert_status 200 /api/kitas/nido-polis "api/kitas/:id"
 assert_status 404 /api/kitas/does-not-exist "api/kitas/:id → 404"
 assert_status 404 /api/nope "unknown endpoint → 404"
 assert_status 200 /data/kitas.json "dataset over HTTP"
-assert_status 200 /web/ "web app index"
-assert_status 200 /web/vendor/leaflet/leaflet.js "vendored leaflet.js"
-assert_status 200 /web/vendor/leaflet/leaflet.css "vendored leaflet.css"
-assert_status 200 /web/vendor/leaflet/images/marker-icon.png "vendored marker icon"
+assert_status 200 / "web app index"
+assert_status 200 /vendor/leaflet/leaflet.js "vendored leaflet.js"
+assert_status 200 /vendor/leaflet/leaflet.css "vendored leaflet.css"
+assert_status 200 /vendor/leaflet/images/marker-icon.png "vendored marker icon"
 assert_status 404 "/../../etc/passwd" "path traversal blocked"
 
 # ---------------------------------------------------------------------------
@@ -117,8 +117,8 @@ assert_json "/api/kitas?sort=capacity" "d['kitas'][0]['capacity'] >= d['kitas'][
 # ---------------------------------------------------------------------------
 say ""
 say "[5/5] app wiring"
-INDEX="$(curl -s -m 10 "${BASE}/web/")"
-for needle in 'vendor/leaflet/leaflet.js' 'vendor/leaflet/leaflet.css' '../data/kitas.json' 'app.js'; do
+INDEX="$(curl -s -m 10 "${BASE}/")"
+for needle in 'vendor/leaflet/leaflet.js' 'vendor/leaflet/leaflet.css' 'data/kitas.json' 'app.js'; do
   case "$INDEX" in
     *"$needle"*) ok "index.html references $needle" ;;
     *) bad "index.html does not reference $needle" ;;

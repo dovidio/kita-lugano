@@ -2,12 +2,12 @@
 //
 //   node server/server.mjs [--port 8787]
 //
-// Serves the project root so that the web app is available at /web/ and the
-// dataset at /data/kitas.json. It also exposes a small read-only JSON API that
-// makes the dataset usable from scripts, notebooks or other frontends.
+// Serves the project root: the web app is index.html at /, the dataset at
+// /data/kitas.json. It also exposes a small read-only JSON API that makes the
+// dataset usable from scripts, notebooks or other frontends.
 //
 // Routes
-//   GET /                        -> redirect to /web/
+//   GET /                        -> the web app (index.html)
 //   GET /api/kitas               -> { meta, count, kitas: [...] }  (filterable)
 //   GET /api/kitas/:id           -> a single record
 //   GET /api/meta                -> dataset metadata
@@ -241,12 +241,6 @@ const server = createServer(async (req, res) => {
       return;
     }
 
-    if (pathname === "/") {
-      res.writeHead(302, { location: "/web/" });
-      res.end();
-      return;
-    }
-
     if (pathname === "/healthz") {
       sendJson(res, 200, { status: "ok", dataset: relative(ROOT, DATA_FILE) });
       return;
@@ -301,7 +295,7 @@ function parsePort(argv) {
 
 const port = parsePort(process.argv.slice(2));
 server.listen(port, "127.0.0.1", () => {
-  console.log(`KiTa Lugano dev server → http://127.0.0.1:${port}/web/`);
-  console.log(`Dataset            → http://127.0.0.1:${port}/data/kitas.json`);
-  console.log(`API                → http://127.0.0.1:${port}/api/kitas?type=privato&age_months=18`);
+  console.log(`KiTa Lugano dev server → http://127.0.0.1:${port}/`);
+  console.log(`Dataset                → http://127.0.0.1:${port}/data/kitas.json`);
+  console.log(`API                    → http://127.0.0.1:${port}/api/kitas?type=privato&age_months=18`);
 });

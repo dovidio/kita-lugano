@@ -1,0 +1,84 @@
+name: Correggi un dato / Correct a detail
+description: Segnala un dato sbagliato o non aggiornato. / Report a wrong or outdated detail.
+title: "[Correzione] "
+labels: ["data: correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Segnala **un dato chiuso e verificabile** (indirizzo, telefono, orari, posti…).
+        Se la struttura ha chiuso o ha cambiato gestore, dillo nelle note: è comunque
+        una correzione utile.
+        / *Report one concrete, verifiable fact. Say so in the notes if the facility closed.*
+
+  - type: input
+    id: facility
+    attributes:
+      label: Struttura / Facility
+      description: Nome come appare nell'elenco, oppure il suo id (es. `nido-polis`).
+      placeholder: "es. Nido Polis"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field
+    attributes:
+      label: Campo da correggere / Field to correct
+      options:
+        - Nome / Name
+        - Tipo (pubblico/privato) / Type
+        - Gestore / Operator
+        - Indirizzo / Address
+        - Posizione sulla mappa / Map position
+        - Telefono o email / Phone or email
+        - Sito web / Website
+        - Orari di apertura / Opening hours
+        - Chiusure / Closures
+        - Posti disponibili / Places
+        - Età accolte / Ages
+        - Lingue / Languages
+        - Altro / Other
+    validations:
+      required: true
+
+  - type: input
+    id: current
+    attributes:
+      label: Valore attuale / Current value
+      description: Se lo sai. / If you know it.
+      placeholder: "es. lu–ve 07:30–18:30"
+
+  - type: input
+    id: correct
+    attributes:
+      label: Valore corretto / Correct value
+      description: Il dato giusto, il più preciso possibile.
+      placeholder: "es. lu–ve 07:00–19:00"
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Fonte ufficiale / Official source (URL)
+      description: Dove hai verificato il dato corretto.
+      placeholder: "https://…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Note
+      description: Contesto utile (es. la struttura ha cambiato gestore a settembre).
+      placeholder: "Facoltativo / Optional"
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Conferme / Confirmations
+      options:
+        - label: Il dato è verificabile nella fonte che ho linkato. / The fact can be verified at the source I linked.
+          required: true
+        - label: Ho controllato di stare segnalando la struttura giusta. / I am reporting the right facility.
+          required: true

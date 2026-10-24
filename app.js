@@ -13,7 +13,9 @@
 
 import { t, fmt, plural, DEFAULT_LANG, LANGS } from './i18n.js';
 
-const DATA_URL = '../data/kitas.json';
+// Relative so the app works both at the domain root and under a GitHub Pages
+// project path (https://<user>.github.io/kita-lugano/).
+const DATA_URL = 'data/kitas.json';
 const LUGANO_CENTER = [46.005, 8.951];
 const LUGANO_ZOOM = 13;
 const TZ = 'Europe/Zurich';

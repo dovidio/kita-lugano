@@ -46,11 +46,16 @@ una via diversa. In quel caso il record viene declassato a `locality`.
 
 ## Snapshot grezzi
 
-I file scaricati sono conservati in `data/raw/` per tracciabilità:
+Durante la raccolta i file scaricati sono conservati **localmente** in `data/raw/`
+per tracciabilità:
 
 - `nidi-infanzia-overview.html`, `nido-*.html` — pagine lugano.ch
 - `guida-diventare-mamma-papa-2024.pdf`, `guida-2024.txt` — guida e sua estrazione testuale
 - `geocode-cache.json` — cache delle risposte del geocoder
+
+Questa cartella **non è versionata** (vedi `.gitignore`): contiene documenti di terzi
+che è più corretto linkare che ridistribuire. Gli URL restano in `meta.sources` e in
+questo documento; `npm run geocode` ricrea la cache quando serve.
 
 ## Cosa NON è (ancora) incluso
 
