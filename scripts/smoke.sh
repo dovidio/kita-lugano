@@ -97,6 +97,8 @@ assert_status 200 /vendor/leaflet/leaflet.js "vendored leaflet.js"
 assert_status 200 /vendor/leaflet/leaflet.css "vendored leaflet.css"
 assert_status 200 /vendor/leaflet/images/marker-icon.png "vendored marker icon"
 assert_status 404 "/../../etc/passwd" "path traversal blocked"
+assert_status 404 "/.git/config" "dot-paths blocked (.git)"
+assert_status 404 "/.nojekyll" "dot-paths blocked (.nojekyll)"
 
 # ---------------------------------------------------------------------------
 say ""

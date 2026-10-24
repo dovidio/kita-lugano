@@ -197,6 +197,15 @@ async function serveStatic(req, res, pathname) {
     return;
   }
 
+  // Never serve dot-paths: this is a project root that also contains .git/,
+  // .github/ and .nojekyll. GitHub Pages does not deploy them either.
+  const segments = relative(ROOT, target).split(sep).filter(Boolean);
+  if (segments.some((segment) => segment.startsWith("."))) {
+    res.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
+    res.end("404 Not Found");
+    return;
+  }
+
   let info;
   try {
     info = await stat(target);
