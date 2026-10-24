@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-The data in data/kitas.json is derived from publications of the Città di Lugano
-(City of Lugano) and from geocoding by swisstopo / geo.admin.ch. Map tiles are
-© OpenStreetMap contributors, licensed under ODbL.
-
-The bundled Leaflet library (web/vendor/leaflet/) is © Volodymyr Agafonkin and
-contributors, licensed under BSD-2-Clause. See https://leafletjs.com.

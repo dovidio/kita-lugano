@@ -272,5 +272,6 @@ notes.
 
 ## License
 
-Code: MIT. Data: derived from publications of the Città di Lugano; please credit
-the City of Lugano and OpenStreetMap contributors if you reuse it.
+Code: [MIT](LICENSE). Data: derived from publications of the Città di Lugano and
+geocoded with swisstopo; please credit the City of Lugano and OpenStreetMap
+contributors if you reuse it. Full attributions are in [NOTICE](NOTICE).

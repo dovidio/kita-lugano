@@ -1,0 +1,32 @@
+# Notice
+
+The MIT license in `LICENSE` applies to the code in this repository.
+
+## Data
+
+`data/kitas.json` is derived from publications of the **Città di Lugano**
+(City of Lugano) and from geocoding by **swisstopo / geo.admin.ch**. It is
+reproduced here for the convenience of families and developers; the authoritative
+source remains the City of Lugano. If you reuse it, please credit:
+
+- Città di Lugano — <https://www.lugano.ch>
+- swisstopo / geo.admin.ch — <https://api3.geo.admin.ch>
+
+The dataset contains contact details (phone numbers, e-mail addresses, websites)
+that the City of Lugano, LIS or the facilities themselves publish publicly. They
+are included so that parents can reach the facilities. If you are a facility and
+want a detail corrected or removed, please open an issue.
+
+## Map data
+
+Map tiles are served by OpenStreetMap and are
+© [OpenStreetMap contributors](https://www.openstreetmap.org/copyright),
+available under the Open Database License (ODbL). The map is rendered with
+**Leaflet** 1.9.4 (`vendor/leaflet/`), © Volodymyr Agafonkin and contributors,
+licensed under BSD-2-Clause — see <https://leafletjs.com>.
+
+## Third-party documents
+
+PDFs and HTML snapshots of third-party documents used during data collection are
+*not* redistributed in this repository (see `.gitignore`): they are linked from
+`data/kitas.json` (`meta.sources`) and `docs/SOURCES.md` instead.
